@@ -97,18 +97,23 @@ def turtlePlot(turtleCommands):
         ys=[x[1] for x in coords]
     plt.plot(xs,ys)
     plt.show()
-  
+   """
+ This function is creating the interactive menu, from which all the previous functions can be accesed. It does not take any
+ inputs, as it is runs once the whole program is run. 
+ 
+ created by:    Alexandru Palade 215179@dtu.dk
+
+ """
 def Main():
     while True:
 
-        # Define menu items
-        # menuItems = np.array(["Choose the type of Lindenmayer system and the number of\
-        #               iterations", "Generate plot", "Quit"])
-        print("1.Choose the type of Lindenmayer system and the number of iterations")
-                      
+        # The options are printed
+        print("1.Choose the type of Lindenmayer system and the number of iterations")                 
         print("2.Generate plot")
         print("3.Quit")
         
+        # The choice made must be an integer, and we give it some conditions thorugh if-statements.
+        # Also, there is an if-statement in order to prevent error.
         choice = int(input("Enter your choice: "))
         if choice == 1:
             System = int(input("Choose the type of Lindenmayer system:\n 1.Koch System\n 2.Sierpinski System \n "))
@@ -122,6 +127,7 @@ def Main():
                 print('To prevent excessive run-time, the number of iterations is limited to 8.')
             if System == 0 or N == 0:
                 print('You have not selected a system or number of iterations.')
+            # At this point, it is shown how every function in the whole program should run, and what inputs should be used for each of them.
             LindList = LindIter(System, N)
             turtlePlot(turtlegraph(LindList[0],LindList[1],LindList[2]))
         if choice == 3:
