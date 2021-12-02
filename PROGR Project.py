@@ -76,7 +76,7 @@ def turtlegraph(lindList, System, N):
  This function takes the string turtleCommands and converts the step length and
  turn angle into a series of coordinates which can then be plotted.
  
- created by:    Dylan Bailey 215228@dtu.dk
+ created by:    Dylan Bailey 215228@dtu.dk and Veronica Miscu 215159@dtu.dk
  """
 def turtlePlot(turtleCommands):
     coords = np.array([[0,0]])
@@ -91,10 +91,10 @@ def turtlePlot(turtleCommands):
         else:
             coords = np.append(coords,[np.add(np.array(coords[-1]),\
                                               np.dot(angle,steps),dtype=float)],axis = 0)
-        xs=[x[0] for x in coords]
-        ys=[x[1] for x in coords]
-    plt.plot(xs,ys)
-    plt.show()
+        xs=[x[0] for x in coords] #plotting the first column of the coordintes for the x-axis
+        ys=[x[1] for x in coords] #plotting the second column of the coordinated for the y-axis
+    plt.plot(xs,ys) #creating the graph for the line plot 
+    plt.show() #show the plot
 """
  This function will display the interactive menu, from which all the previous functions can be accessed. It does not take any
  inputs, as it is runs once the whole program is run. It presents several choices, which execute different parts of the whole script
