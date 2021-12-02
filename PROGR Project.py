@@ -56,7 +56,6 @@ This function takes the inputs LindList, System and N and converts the
 string of letters given by LindIter into step lengths and angles which 
 correspond to the rules of the system. The return is a string of step 
 lengths and angles called turtleCommands
-
 created by:     Dylan Bailey s215228@dtu.dk
 """
 def turtlegraph(lindList, System, N):
@@ -73,12 +72,11 @@ def turtlegraph(lindList, System, N):
     turtleCommands = turtleCommands.rstrip()
     turtleCommands = turtleCommands.split(" ")         
     return turtleCommands
- """
+"""
  This function takes the string turtleCommands and converts the step length and
  turn angle into a series of coordinates which can then be plotted.
  
  created by:    Dylan Bailey 215228@dtu.dk
-
  """
 def turtlePlot(turtleCommands):
     coords = np.array([[0,0]])
@@ -97,12 +95,11 @@ def turtlePlot(turtleCommands):
         ys=[x[1] for x in coords]
     plt.plot(xs,ys)
     plt.show()
-   """
+"""
  This function is creating the interactive menu, from which all the previous functions can be accesed. It does not take any
  inputs, as it is runs once the whole program is run. 
  
  created by:    Alexandru Palade 215179@dtu.dk
-
  """
 def Main():
     while True:
@@ -134,13 +131,3 @@ def Main():
             print('Bye-Bye!')
             break
 Main()
-            
-                
-            
-            
-            
-            
-        
-              
-
-    
