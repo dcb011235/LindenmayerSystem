@@ -96,8 +96,9 @@ def turtlePlot(turtleCommands):
     plt.plot(xs,ys)
     plt.show()
 """
- This function is creating the interactive menu, from which all the previous functions can be accesed. It does not take any
- inputs, as it is runs once the whole program is run. 
+ This function will display the interactive menu, from which all the previous functions can be accessed. It does not take any
+ inputs, as it is runs once the whole program is run. It presents several choices, which execute different parts of the whole script
+ depending on conditions imposed by if-statements.
  
  created by:    Alexandru Palade 215179@dtu.dk
  """
